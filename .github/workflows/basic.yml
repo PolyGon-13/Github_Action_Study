@@ -6,6 +6,8 @@ on:
   pull_request:
     brances: [ main ]
 
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
