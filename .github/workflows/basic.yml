@@ -9,12 +9,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  checkout:
     runs-on: ubuntu-latest
 
     steps:
       - uses: Actions/checkout@v3
-      
+
+  process:
+    runs-on: ubuntu-latest
+    steps:
       - name: Run a one-line script
         run: echo Hello,world!
 
