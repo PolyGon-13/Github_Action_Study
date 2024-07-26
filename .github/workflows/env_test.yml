@@ -1,12 +1,12 @@
 name: Deployments example
 
 on:
-	push:
- 		branches: [ "main", "dev" ]
+  push:
+    branches: [ "main", "dev" ]
 
 jobs:
-	build-and-test:
- 		runs-on: ubuntu-latest
+  build-and-test:
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
    
