@@ -4,8 +4,8 @@ on:
   push:
   pull_request:
   
-  permissions:
-    issues: write
+permissions:
+  issues: write
 
 jobs:
   verify:
