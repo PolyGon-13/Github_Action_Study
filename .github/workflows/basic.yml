@@ -1,5 +1,5 @@
 name: CI
-run-name: @${ github.action } run by @${{ github.actor }}
+run-name: CI run by @${{ github.actor }}
 
 on:
   push:
