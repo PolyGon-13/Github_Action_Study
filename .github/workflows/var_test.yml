@@ -10,6 +10,7 @@ jobs:
     if: ${{ vars.EXEC_WF == 'true' }}
     runs-on: ubuntu-latest
 
-  steps:
-    - uses: actions/checkout@v3
-    - run: | [[ -f ${{ vars.FILE_TO_CHECK }} ]] || ( echo "${{ vars.FILE_TO_CHECK }} file needs to be added to ${{ github.repository }} !" && exit 1 )
+    steps:
+      - uses: actions/checkout@v3
+      - run: | 
+          [[ -f ${{ vars.FILE_TO_CHECK }} ]] || ( echo "${{ vars.FILE_TO_CHECK }} file needs to be added to ${{ github.repository }} !" && exit 1 )
