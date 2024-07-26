@@ -3,6 +3,9 @@ name: Verify file
 on:
   push:
   pull_request:
+  
+  permissions:
+    issues: write
 
 jobs:
   verify:
