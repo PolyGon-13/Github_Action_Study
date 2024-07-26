@@ -29,3 +29,28 @@ jobs:
       with:
         name: archive.zip
         path: build/libs
+
+  depoly-dev:
+    needs: [build-and-test]
+    if: github.ref == 'refs/heads/dev'
+
+    runs-on: ubuntu-latest
+    environment:
+      name: dev
+      url: https://github.com/${{ github.repository }}/releases/tag/v${{ vars.DEV_VERSION }}
+
+    steps:
+      - name: Download candidate artifacts
+        uses: actions/download-artifacts@v3
+        with:
+          name: archive.zip
+          
+      - name: release to dev
+        uses: softprops/action-gh-release@v0.1.15
+        with:
+          tag_name: v${{ vars.DEV_VERSION }}
+          token: ${{ secrets.DEV_TOKEN }}
+          prerelease: true
+          draft: true
+          name: dev
+          files: greetings-depoly.jar
