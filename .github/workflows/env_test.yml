@@ -16,16 +16,12 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         
-    - name: Set up Gradle
-      uses: gradle/gradle-build-action@v2
+    - uses: gradle/gradle-build-action@v2
       with:
-        gradle-version: '7.5'
         arguments: build
 
-    - name: Run Gradle Build and Test
-      uses: gradle/gradle-build-action@v2
+    - uses: gradle/gradle-build-action@v2
       with:
-        gradle-version: '7.5'
         arguments: test
 
     - name: Upload Artifact
