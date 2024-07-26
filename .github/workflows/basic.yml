@@ -1,4 +1,5 @@
-run-name: POL run by @{{ github.actor }}
+name: CI
+run-name: CI run by @{{ github.actor }}
 
 on:
   push:
