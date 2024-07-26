@@ -12,16 +12,22 @@ on:
 jobs:
   checkout:
     runs-on: ubuntu-latest
-
     steps:
       - uses: Actions/checkout@v3
+
+  report_os:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check-os
+        if: runner.os != 'Windows'
+        run: echo "The runner's operating system is $RUNNER_OS."
 
   process:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
         run: echo Hello,world!
-
+        
       - name: Run a multi-line script
         run: |
           echo Add other Actions to build,
