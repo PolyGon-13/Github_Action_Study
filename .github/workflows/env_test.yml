@@ -19,13 +19,13 @@ jobs:
       - name: Set up Gradle
         uses: gradle/gradle-build-action@v2
         with:
-          gradle-version: '8.9'  # 원하는 Gradle 버전으로 설정
+          gradle-version: '8.9'
 
       - name: Run Gradle Build
-        run: gradle build  # Gradle Wrapper가 없으므로 직접 Gradle을 실행합니다.
+        run: gradle build
 
       - name: Run Gradle Test
-        run: gradle test  # Gradle Wrapper가 없으므로 직접 Gradle을 실행합니다.
+        run: gradle test
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
