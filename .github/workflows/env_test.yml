@@ -32,7 +32,7 @@ jobs:
         name: archive.zip
         path: build/libs
 
-  depoly-dev:
+  deploy-dev:
     needs: [build-and-test]
     if: github.ref == 'refs/heads/dev'
 
