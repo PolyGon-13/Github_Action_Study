@@ -14,7 +14,5 @@
 [![IO](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/io_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/io_test.yml)
 - 직접 워크플로를 호출해 ISSUES에 접근
 
-</br>
-
 [![C Compiler](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/c_compile_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/c_compile_test.yml)
 - .c 파일이 push 되었을 경우 해당 파일을 컴파일
