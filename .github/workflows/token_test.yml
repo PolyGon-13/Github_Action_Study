@@ -1,4 +1,4 @@
-name: Token test
+name: Token
 
 on:
   push:
