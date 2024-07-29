@@ -9,7 +9,7 @@
 토큰 이용
 
 [![DEPLOY](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/deploy_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/deploy_test.yml)
-배포 작업 테스트
+배포 작업 테스트 (gradle을 설치할 수 없어 현재 failing 상태)
 
 [![IO](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/io_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/io_test.yml)
 직접 워크플로를 호출해 ISSUES에 접근
