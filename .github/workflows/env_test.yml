@@ -1,4 +1,4 @@
-name: Deployments example
+name: ENV
 
 on:
   push:
