@@ -1,0 +1,34 @@
+name: IO_2
+
+on:
+  workflow_call:
+    inputs:
+      title:
+        required: true
+        type: string
+  workflow_dispatch:
+    inputs:
+      title:
+        description: 'Issue title'
+        required: true
+      body:
+        description: 'Issue body'
+        required: true
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      build-stage: ${{ steps.set-debug-stage.outputs.BUILD_STAGE }}
+    steps:
+      - name: Set debug
+        id: set-debug-stage
+        run: echo "BUILD_STAGE=debug" >> $GITHUB_OUTPUT
+
+report:
+  runs-on: ubuntu-latest
+  needs: setup
+  steps:
+    - name: Get stage
+      run: echo "The build stage is ${{ needs.setup.outputs.build-stage }}"
+    
