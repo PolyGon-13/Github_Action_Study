@@ -1,4 +1,4 @@
-name: C Language Compile Check
+name: C Compiler
 
 on:
   push:
