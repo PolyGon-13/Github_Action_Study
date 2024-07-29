@@ -1,4 +1,4 @@
-name: Verify file
+name: ENV
 
 on:
   push:
