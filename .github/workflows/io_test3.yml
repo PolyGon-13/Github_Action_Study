@@ -25,10 +25,10 @@ jobs:
         id: set-debug-stage
         run: echo "BUILD_STAGE=debug" >> $GITHUB_OUTPUT
 
-report:
-  runs-on: ubuntu-latest
-  needs: setup
-  steps:
-    - name: Get stage
-      run: echo "The build stage is ${{ needs.setup.outputs.build-stage }}"
+  report:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - name: Get stage
+        run: echo "The build stage is ${{ needs.setup.outputs.build-stage }}"
     
