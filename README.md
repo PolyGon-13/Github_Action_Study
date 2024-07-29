@@ -8,6 +8,7 @@
 [![Token](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/token_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/token_test.yml)
 토큰 이용
 
+[![DEPLOY](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/deploy_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/deploy_test.yml)
 배포 작업 테스트
 
 [![IO](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/io_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/io_test.yml)
