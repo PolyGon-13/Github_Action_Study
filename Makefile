@@ -7,7 +7,7 @@ CFLAGS = -Wall -Wextra
 # OBJS : SRCS 변수에 있는 모든 .c 파일의 확장자를 .o로 변경하여 목적 파일 목록을 제작
 # EXEC : 실행 파일의 이름 지정
 SRCS = $(wildcard src/*.c)
-OBJS = $(SRCS:src/%.c=.o)
+OBJS = $(SRCS:src/%.c=obj/%.o)
 EXEC = compile_test
 
 # all : 기본 타켓 설정 (make 명령어를 실행하면 이 타켓이 호출됨 -> 여기서는 EXEC(compile_test)를 빌드)
@@ -20,7 +20,8 @@ $(EXEC): $(OBJS)
 
 # .c 파일을 .o 파일로 컴파일하는 규칙
 # $<는 첫 번째 종속 파일(여기서는 .c 파일)을, $@는 현재 타켓(여기서는 .o 파일)
-%.o: %.c
+obj/%.o: src/%.c
+	@mkdir -p obj
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # clean : 불필요한 파일을 제거하는 규칙
