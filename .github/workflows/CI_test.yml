@@ -22,7 +22,7 @@ jobs:
         if: runner.os != 'Windows'
         run: echo "The runner's operating system is $RUNNER_OS."
 
-  process:
+  echo_test:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
