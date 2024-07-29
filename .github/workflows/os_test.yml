@@ -1,4 +1,4 @@
-name: CI
+name: OS
 run-name: CI run by @${{ github.actor }}
 
 on:
