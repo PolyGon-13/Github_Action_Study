@@ -10,19 +10,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      changelog:
-        description: "The generated changelog for the new version"
-      clean_changelog:
-        description: "The generated changelog for the new version without the version name in it"
-      version:
-        description: "The new version"
-    env:
-      ARTIFACT_TAG: ${{ steps.changelog.outputs.version }}
-    
+      changelog: ${{ steps.set_outputs.outputs.changelog }}
+      clean_changelog: ${{ steps.set_outputs.outputs.clean_changelog }}
+      version: ${{ steps.set_outputs.outputs.version }}
     steps:
       - name: Conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3.14.0
-        runs: |
-          echo "Build Success $ARTIFACT_TAG"
-        
+
+      - name: Set Output Variables
+        id: set_outputs
+        run: |
+          echo "changelog=${{ steps.changelog.outputs.changelog }}" >> $GITHUB_ENV
+          echo "clean_changelog=${{ steps.changelog.outputs.clean_changelog }}" >> $GITHUB_ENV
+          echo "version=${{ steps.changelog.outputs.version }}" >> $GITHUB_ENV
