@@ -15,3 +15,4 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v3.14.0
     outputs:
       artifact-tag: ${{ steps.changelog.outputs.version }}
+      run: echo "Build Success! $artifact-tag"
