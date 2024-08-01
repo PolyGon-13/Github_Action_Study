@@ -25,5 +25,5 @@ jobs:
     steps:
       - name: Get tag
         env:
-          TAG: ${{ build.changelog.outputs.version }}
+          TAG: ${{ needs.changelog.outputs.version }}
         run: echo "Build Success! $TAG"
