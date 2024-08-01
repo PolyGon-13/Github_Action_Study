@@ -1,3 +1,5 @@
+# c_compile_test.yml 테스트용 파일
+
 # CC : C컴파일러를 설정(gcc)
 # CFLAGS : 컴파일러 플래그 지정 (-Wall 은 모든 경고 메시지를 출력, -Wextra 는 추가적인 경고 메시지를 출력)
 CC = gcc
