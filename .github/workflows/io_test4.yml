@@ -2,9 +2,11 @@ name: IO_4
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -12,11 +14,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      
+
+      - name: Display package.json
+        run: cat package.json
+
       - name: Conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v5.3.0
-      
-    outputs:
-      artifact-tag: ${{ steps.changelog.outputs.version }}
-      run: echo "Build Success! $artifact-tag"
+        with:
+          # Ensure that the `package.json` is used for version detection
+          version-file: './package.json'
+          version-path: 'version'
+
+      - name: Print Changelog Version
+        run: echo "Build Success! Version: ${{ steps.changelog.outputs.version }}"
