@@ -6,12 +6,20 @@ on:
   pull_request:
     branches: [ main ]
 
+outputs:
+  changelog:
+    description: "The generated changelog for the new version"
+  clean_changelog:
+    description: "The generated changelog for the new version without the version name in it"
+  version:
+    description: "The new version"
+
 jobs:
   build:
     runs-on: ubuntu-latest
-  steps:
-    - name: Converntional Changelog Action
-      id: changelog
-      uses: TriPSs/conventional-changelog-action@v3.14.0    
     outputs:
       artifact-tag: ${{ steps.changelog.outputs.version }}
+    steps:
+      - name: Conventional Changelog Action
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v3.14.0
