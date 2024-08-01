@@ -36,6 +36,10 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: greetings-jar
+          
+      - name: Set execute permission for jar file
+        run: chmod +x greetings-actions.jar
+  
       - shell: bash
         run: |
           java -jar greetings-actions.jar
