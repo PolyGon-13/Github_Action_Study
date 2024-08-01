@@ -1,0 +1,25 @@
+name: IO_4
+
+on:
+  workflow_call:
+    inputs:
+      title:
+        required: true
+        type: string
+  workflow_dispatch:
+    inputs:
+      title:
+        description: 'Issue title'
+        required: true
+      body:
+        description: 'Issue body'
+        required: true
+
+outputs:
+  changelog:
+    description: "The generated changelog for the new version"
+  clean_changelog:
+    description: "The generated changelog for the new version without the version name in it"
+  version:
+    description: "The new version"
+
