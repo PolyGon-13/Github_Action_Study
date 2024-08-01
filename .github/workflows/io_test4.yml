@@ -10,8 +10,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      artifact-tag: ${{ steps.changelog.outputs.version }}
+      changelog:
+        description: "The generated changelog for the new version"
+      clean_changelog:
+        description: "The generated changelog for the new version without the version name in it"
+      version:
+        description: "The new version"
+    env:
+      ARTIFACT_TAG: ${{ steps.changelog.outputs.version }}
+    
     steps:
       - name: Conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3.14.0
+        runs: |
+          echo "Build Success $ARTIFACT_TAG"
+        
