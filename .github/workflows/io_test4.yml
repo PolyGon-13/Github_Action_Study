@@ -11,6 +11,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.changelog.outputs.version }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -25,5 +27,5 @@ jobs:
     steps:
       - name: Get tag
         env:
-          TAG: ${{ needs.changelog.outputs.version }}
+          TAG: ${{ needs.build.outputs.version }}
         run: echo "Build Success! $TAG"
