@@ -1,4 +1,5 @@
 {
+  "name": "test io_test4.yml",
   "version": "1.0.2",
   "users": [
     {
@@ -6,31 +7,26 @@
       "firstName": "AAAAA",
       "lastName": "as23",
       "phoneNumber": "123456",
-      "emailAddress": "AAAAA@test.com",
     },
     {
       "userId": 2,
       "firstName": "BBBB",
       "lastName": "h5jdd",
-      "phoneNumber": "123456",
     },
     {
       "userId": 3,
       "firstName": "CCCCC",
       "lastName": "2dhbs",
-      "phoneNumber": "33333333",
     },
     {
       "userId": 4,
       "firstName": "DDDDD",
       "lastName": "bacasd",
-      "phoneNumber": "222222222",
     },
     {
       "userId": 5,
       "firstName": "EEEEE",
       "lastName": "asdfasdf",
-      "phoneNumber": "111113332",
     }
   ]
 }
