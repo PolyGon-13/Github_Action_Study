@@ -9,18 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
-      changelog: ${{ steps.set_outputs.outputs.changelog }}
-      clean_changelog: ${{ steps.set_outputs.outputs.clean_changelog }}
-      version: ${{ steps.set_outputs.outputs.version }}
     steps:
       - name: Conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3.14.0
-
-      - name: Set Output Variables
-        id: set_outputs
-        run: |
-          echo "changelog=${{ steps.changelog.outputs.changelog }}" >> $GITHUB_ENV
-          echo "clean_changelog=${{ steps.changelog.outputs.clean_changelog }}" >> $GITHUB_ENV
-          echo "version=${{ steps.changelog.outputs.version }}" >> $GITHUB_ENV
+    outputs:
+      artifact-tag: ${{ steps.changelog.outputs.version }}
