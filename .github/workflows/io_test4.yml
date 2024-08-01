@@ -1,31 +1,17 @@
 name: IO_4
 
 on:
-  workflow_call:
-    inputs:
-      title:
-        required: true
-        type: string
-  workflow_dispatch:
-    inputs:
-      title:
-        description: 'Issue title'
-        required: true
-      body:
-        description: 'Issue body'
-        required: true
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+  steps:
+    - name: Converntional Changelog Action
+      id: changelog
+      uses: TriPSs/conventional-changelog-action@v3.14.0    
     outputs:
       artifact-tag: ${{ steps.changelog.outputs.version }}
-      clean_changelog: ${{ steps.generate_changelog.outputs.clean_changelog }}
-      version: ${{ steps.generate_changelog.outputs.version }}
-    steps:
-      - name: Generate Changelog
-        id: generate_changelog
-        run: |
-          echo "::set-output name=changelog::$(cat changelog.txt)"
-          echo "::set-output name=clean_changelog::$(cat clean_changelog.txt)"
-          echo "::set-output name=version::$(cat version.txt)"
