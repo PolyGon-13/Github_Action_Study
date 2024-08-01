@@ -14,7 +14,7 @@ on:
       body:
         description: 'Issue body'
         required: true
-
+      
 outputs:
   changelog:
     description: "The generated changelog for the new version"
@@ -23,3 +23,8 @@ outputs:
   version:
     description: "The new version"
 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      artifact-tag: ${{ steps.changelog.outputs.version }}
