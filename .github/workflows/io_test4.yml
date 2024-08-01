@@ -19,4 +19,4 @@ jobs:
       
     outputs:
       artifact-tag: ${{ steps.changelog.outputs.changelog }}
-      run: echo "Build Success! ${{ steps.changelog.outputs.changelog }}"
+      run: echo "Build Success! $artifact-tag"
