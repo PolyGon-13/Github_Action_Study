@@ -1,7 +1,19 @@
 plugins {
-    java
+    id 'java'
+}
+
+repositories {
+    jcenter() // 혹은 필요한 Maven repository를 추가할 수 있습니다
 }
 
 dependencies {
-    testImplementation('junit:junit:4.13')
+    testCompile 'junit:junit:4.12'
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'com.example.MainClass' // 여기에 실제 메인 클래스의 패키지 경로와 클래스 이름을 넣어주세요
+        )
+    }
 }
