@@ -20,5 +20,8 @@
 [![IO_3](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/io_test3.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/io_test3.yml)
 잡 간 액세스
 
+[![IO_4](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/io_test4.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/io_test4.yml)
+package.json 파일 버전 추적
+
 [![C Compiler](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/c_compile_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/c_compile_test.yml)
 .c 파일이 push 되었을 경우 해당 파일을 컴파일
