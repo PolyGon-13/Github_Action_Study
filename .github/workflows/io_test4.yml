@@ -21,8 +21,9 @@ jobs:
 
   build-test:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Get tag
         env:
-          TAG: ${{ steps.changelog.outputs.version }}
+          TAG: ${{ build.changelog.outputs.version }}
         run: echo "Build Success! $TAG"
