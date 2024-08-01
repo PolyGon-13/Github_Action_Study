@@ -31,4 +31,7 @@ jobs:
     steps:
       - name: Get stage
         run: echo "The build stage is ${{ needs.setup.outputs.build-stage }}"
+        # BUILD_STAGE = ${{  needs.setup.outputs.build-stage }}
+        # run: echo "The build stage is $BUILD_STAGE"
+        
     
