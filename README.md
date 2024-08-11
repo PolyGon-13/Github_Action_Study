@@ -26,5 +26,8 @@ package.json 파일 버전 추적
 [![Java Build](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/java_build.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/java_build.yml)
 아티팩트 테스트 (gradle을 설치할 수 없어 현재 failing 상태)
 
+[![Cache](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/cache_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/cache_test.yml)
+캐시 테스트
+
 [![C Compiler](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/c_compile_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/c_compile_test.yml)
 .c 파일이 push 되었을 경우 해당 파일을 컴파일
