@@ -4,9 +4,16 @@ on:
   push:
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
-    - uses: actions/cache@v3
-      env:
-        
-  
+    steps:
+      - uses: actions/cache@v3
+        env:
+          cache-name: go-cache
+        with:
+          path: |
+            ~/.cache/go-build
+            ~/go/pkg/mod
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-${{ runner.os }}-build-${{ runner.os }}-
