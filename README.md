@@ -1,4 +1,4 @@
-## Github Action
+## Github Action Study
 [![OS](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/os_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/os_test.yml) 현재 os 검사
 
 [![ENV](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/env_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/env_test.yml) 환경변수 이용
