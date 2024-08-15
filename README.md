@@ -25,4 +25,6 @@
 
 [![create-failure-issue](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/dispatch_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/dispatch_test.yml) 변경 없는 워크플로 트리커
 
+[![Concurrency Test1](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/concurrency_test1.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/concurrency_test1.yml)
+
 [![C Compiler](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/c_compile_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/c_compile_test.yml) .c 확장자 파일이 push 되었을 경우 해당 파일을 컴파일
