@@ -1,0 +1,19 @@
+name : Concurrency Test2
+
+on:
+  push:
+    branches: [ main ]
+
+concurrency:
+  group: build-group
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code2
+        uses: actions/checkout@v3
+
+      - name: Build2
+        run: echo "Build2"
