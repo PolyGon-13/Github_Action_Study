@@ -2,6 +2,7 @@ name: activity type test
 
 on:
   issues:
+    types: [ opened, edited, closed ]
 
 jobs:
   notify-for-issues:
