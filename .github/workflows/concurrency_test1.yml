@@ -1,0 +1,19 @@
+name: Concurrency Test1
+
+on:
+  push:
+    branches: [ main ]
+
+concurrency:
+  group: build-group
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+  
+      - name : Build
+        run: echo "Build Start"
