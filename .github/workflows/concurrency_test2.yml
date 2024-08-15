@@ -5,8 +5,8 @@ on:
     branches: [ main ]
 
 concurrency:
-  group: build-group2
-  cancel-in-progress: false
+  group: build-group
+  cancel-in-progress: true
 
 jobs:
   build:
