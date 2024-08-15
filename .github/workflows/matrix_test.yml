@@ -9,7 +9,7 @@ jobs:
       matrix:
         prod: [ prod1, prod2 ]
         level: [ dev, stage, prod ]
-    uses: ./.github/workflows/dispatch_test.yml
+    uses: rndrepos/common/.github/workflows/create-issue.yml@v1
     secrets: inherit
     with:
       title: "${{ matrix.prod }} issue"
