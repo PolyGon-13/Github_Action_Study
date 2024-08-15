@@ -1,0 +1,33 @@
+name: Concurrency Job Test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  job1:
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Run Job 1
+        run: |
+          echo "Running Job 1"
+          sleep 60
+  job2:
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Run Job 2
+        run: |
+          echo "Running Job 2"
+          sleep 30
