@@ -5,7 +5,11 @@ on:
     types: [ opened, edited, closed ]
 
 jobs:
-  notify-for-issues:
+  create-issue-on-failure:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Something happened with an issue"
+      - name: workflow-call
+        uses: ./.github/workflows/dispatch_test.yml
+        with:
+          title: "Automated workflow failure issue for commit ${{ github.sha }}"
+          body: "This issue was automatically created by the GitHub Action workflow ** ${{ github.workflow }} **"
