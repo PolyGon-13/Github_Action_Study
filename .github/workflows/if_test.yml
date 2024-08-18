@@ -1,0 +1,13 @@
+name: Conditional function
+
+on:
+  push:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    if: github.ref=='refs/heads/test'
+    steps:
+      - name: check-os
+        if: runner.os != 'Windows'
+        run: echo "The runner's operating system is $RUNNER_OS."
