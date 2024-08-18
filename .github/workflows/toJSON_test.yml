@@ -1,0 +1,14 @@
+name: toJSON
+
+on:
+  push:
+
+jobs:
+  print_to_log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump Github context
+        id: github_context_step
+        run: echo '${{ toJSON(github) }}'
+      - name: Dump steps contexts
+        run: echo '${{ toJSON(steps) }}'
