@@ -4,13 +4,19 @@ on:
   push:
 
 jobs:
-  test-job:
-    runs-on: ubuntu-latest
+  create-new-issue:
     strategy:
       matrix:
-        os: [ubuntu-latest,window-latest]
-        node-version: [14,16]
+        prod: [prod1,prod2]
+        level: [dev,stage,prod]
+    uses: ./.github/workflows/create-issue.yml
+    secrets: inherit
+    with:
+      title: "${{ matrix.prod }} issue"
+      body: "Update for ${{ matrix.level }}"
+
+  report-issue-number:
+    runs-on: ubuntu-latest
+    needs: create-new-issue
     steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
+      - run: echo ${{ needs.create-new-issue.outputs.issue-num }}
