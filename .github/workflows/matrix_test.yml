@@ -13,7 +13,6 @@ jobs:
     with:
       title: "${{ matrix.prod }} issue"
       body: "Update for ${{ matrix.level }}"
-      continue-on-error: true # 조합 하나가 실패해도 워크플로는 나머지 행렬 처리 계속함
     # secrets: inherit
     permissions:
       issues: write
