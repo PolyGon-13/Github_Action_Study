@@ -14,6 +14,9 @@ jobs:
       title: "${{ matrix.prod }} issue"
       body: "Update for ${{ matrix.level }}"
     # secrets: inherit
+    # 워크플로의 비밀변수를 상속시키는 기능
+    # continue-on-error: true
+    # 조합 하나가 실패하더라도 워크플로가 나머지 행렬 처리를 계속 하도록 하는 구문으로 with나 uses와 같이 사용될 수 없음
     permissions:
       issues: write
 
