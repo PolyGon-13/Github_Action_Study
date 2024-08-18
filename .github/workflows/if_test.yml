@@ -7,6 +7,7 @@ jobs:
   report:
     runs-on: ubuntu-latest
     if: github.ref=='refs/heads/main'
+    # github.ref는 브랜치를 가리키고 'refs/heads/브랜치이름' 형식임
     steps:
       - name: check-os
         if: runner.os != 'Windows'
