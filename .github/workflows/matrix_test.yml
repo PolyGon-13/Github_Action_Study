@@ -1,4 +1,4 @@
-name: Create demo issue 3
+name: Matrix_create_issue
 
 on:
   push:
