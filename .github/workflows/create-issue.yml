@@ -9,8 +9,6 @@ on:
       body:
         required: true
         type: string
-    secrets:
-      inherit: true
 
 jobs:
   create-issue:
