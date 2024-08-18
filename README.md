@@ -31,4 +31,5 @@
 [![Concurrency Test2](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/concurrency_test2.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/concurrency_test2.yml)
 [![Concurrency Job Test](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/concurrency_job_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/concurrency_job_test.yml) 동시성 처리
 
-[![Matrix_create_issue](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/matrix_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/matrix_test.yml) 매트릭스로 워크플로 실행
+[![Matrix_create_issue](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/matrix_test.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/matrix_test.yml) 
+[![Create Issue](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/create-issue.yml/badge.svg)](https://github.com/PolyGon-13/Github_Action_Study/actions/workflows/create-issue.yml) 매트릭스로 워크플로 실행
