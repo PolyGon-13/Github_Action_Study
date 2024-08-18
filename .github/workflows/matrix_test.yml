@@ -14,6 +14,8 @@ jobs:
       title: "${{ matrix.prod }} issue"
       body: "Update for ${{ matrix.level }}"
     secrets: inherit
+    permissions:
+      issues: write
 
   report-issue-number:
     runs-on: ubuntu-latest
