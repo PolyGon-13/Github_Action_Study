@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        os: [ubuntu-latest,window-latest]
         node-version: [14,16]
     steps:
       - uses: actions/setup-node@v3
