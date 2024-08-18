@@ -7,13 +7,13 @@ jobs:
   create-new-issue:
     strategy:
       matrix:
-        prod: [prod1,prod2]
-        level: [dev,stage,prod]
+        prod: [prod1, prod2]
+        level: [dev, stage, prod]
     uses: ./.github/workflows/create-issue.yml
-    secrets: inherit
     with:
       title: "${{ matrix.prod }} issue"
       body: "Update for ${{ matrix.level }}"
+    secrets: inherit
 
   report-issue-number:
     runs-on: ubuntu-latest
